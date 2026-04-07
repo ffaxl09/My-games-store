@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FF-AXL Gaming Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header-banner">
+            Buy at <span id="top-price">₹50.00</span> to earn 💎 <span id="top-diamonds">90</span>
+        </div>
+        
+        <div class="main-layout">
+            <div class="card-display">
+                <h2 id="plan-name">WEEKLY MEMBERSHIP LITE</h2>
+                <div class="reward-row">INSTANT REWARD <span>💎 <span id="inst-val">20";</span></span></div>
+                <div class="reward-row">DAILY REWARD <span>💎 <span id="daily-val">10</span></span></div>
+                <p class="info-text">Effective for <span id="valid-days">7</span> days</p>
+                
+                <div class="sub-check">
+                    <input type="checkbox" checked> SUBSCRIPTION
+                </div>
+                
+                <button class="buy-btn" onclick="showPayment()">₹ <span id="btn-price">50.00</span></button>
+            </div>
+
+            <div class="sidebar">
+                <div class="item active" onclick="update('lite')">
+                    <p>WEEKLY LITE</p><span>₹50.00</span>
+                </div>
+                <div class="item" onclick="update('weekly')">
+                    <p>WEEKLY</p><span>₹159.00</span>
+                </div>
+                <div class="item" onclick="update('monthly')">
+                    <p>MONTHLY</p><span>₹799.00</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="pay-modal" class="modal">
+        <div class="modal-box">
+            <h3>Scan to Pay</h3>
+            <p>Payment karke screenshot WhatsApp karein</p>
+            <img src="https://via.placeholder.com/200" alt="QR Code" id="qr-img">
+            <button onclick="closeModal()">Close</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
